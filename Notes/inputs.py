@@ -11,7 +11,7 @@ name = input("What is your name: ")
 #use keyword "input"
 #inside parentheses gives user instructions
 
-print("What is yout name")
+print("What is your name")
 name = input()
 
 #both instruction methods work, but you have to use it the same way all the time
