@@ -1,5 +1,5 @@
 #IC 1st Hello World
 
-print ("what is your name?")
+print ("Hello, what is your name?")
 name = input()
-print(name)
+print("Hello,",name,)
