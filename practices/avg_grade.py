@@ -14,4 +14,3 @@ not_average_grade = (grade_total /8)
 average_grade = (not_average_grade,2)
 
 print("Here is your average grade!",average_grade)
-#I did it
