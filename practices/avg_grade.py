@@ -10,7 +10,7 @@ seventh_period = float(input("What is your grade percentage in your seventh peri
 eighth_period = float(input("What is your grade percentage in your eighth period?"))
 
 grade_total = float(first_prd+second_prd+third_prd+fourth_prd+fifth_prd+sixth_prd+seventh_period+eighth_period)
-not_average_grade = (grade_total /8)
+not_average_grade = (grade_total //8)
 average_grade = (not_average_grade,2)
 
 print("Here is your average grade!",average_grade)
