@@ -45,4 +45,6 @@ noun14 = input()
 print("Give me a part of the human body")
 body_part15 = input()
 
-madlib = print("Ye can always be a bloodthirsty pirate " + noun1 + ", threatening everyone by waving yer " + adjective2 + " sword in the air, but until ye learn to " + verb3 + " like a pirate, ye'll never be " + adverb4 + " accepted as an authetic " + noun5 + ", So here's what ye do: Cleverly work into yer daily conversations " +adjective6 + " pirate phrases such as 'Ahoy there, "+ plural_noun7 + ",' 'Avast, ye " + plural_noun8 + ",' and 'Shiver me " + plural_noun9 + ",'  " + body_part10 + noun11 + noun12 + noun13 + noun14 + body_part15)
+madlib = print("Ye can always be a bloodthirsty pirate " + noun1 + ", threatening everyone by waving yer " + adjective2 + " sword in the air, but until ye learn to " + verb3 + " like a pirate, ye'll never be " + adverb4 + " accepted as an authetic " + noun5 + ", So here's what ye do: Cleverly work into yer daily conversations " +adjective6 + " pirate phrases such as 'Ahoy there, "+ plural_noun7 + ",' 'Avast, ye " + plural_noun8 + ",' and 'Shiver me " + plural_noun9 + ",' Remember to drop all your gs when ye say words such as sailin', spittin', and fightin'. This will give ye a/an " + body_part10 + " start to be recognized as a swashbucklin' " + noun11 + " Once ye have the lingo down pat, it helps to have a three-cornered " + noun12 + " on yer head, stash a/an " + noun13 + " in your pants, and keep a/an " + noun14 + " perched atop yer " + body_part15 + ". Aye, now ye be a real pirate!)
+
+print("Here is your Madlib!",madlib,)
