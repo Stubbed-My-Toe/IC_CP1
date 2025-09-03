@@ -24,7 +24,7 @@ plural_noun7 = input()
 print("Give me another plural noun")
 plural_noun8 = input()
 
-print("Give me another pluarl noun")
+print("Give me another plural noun")
 plural_noun9 = input()
 
 print("Give me a part of the human body")
