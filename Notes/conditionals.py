@@ -37,6 +37,7 @@ else:
 
 print("Your turn is over.")
 
+if monster_hp > 0
 if True:
     attack_roll = random.randint(1,20) + monster_attack
 
