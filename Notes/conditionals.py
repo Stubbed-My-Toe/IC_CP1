@@ -37,8 +37,7 @@ else:
 
 print("Your turn is over.")
 
-if monster_hp > 0
-if True:
+if monster_hp > 0:
     attack_roll = random.randint(1,20) + monster_attack
 
 #comparison operators

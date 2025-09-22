@@ -1,0 +1,15 @@
+#IC 1st User Sign In
+import random
+#ask for credentials
+input_usrnm = input("What is your username? ")
+input_pswrd = input("What is your password? ")
+credentials = input_usrnm + input_pswrd
+#Determining if the credentials match
+if credentials == "IsaacCovingtonFNV":
+    print(f"Welcome to my humble abode {input_usrnm}!")
+
+#punish the wrongdoer
+elif credentials != "IsaacCovingtonFNV":
+    print(random.choice(["You are not invited to my 11th birthday party.", "Your fingerprints look like fat pelicans.", "If you are just cranky, have a snickers."]))
+else:
+    print("L Bozo.")
