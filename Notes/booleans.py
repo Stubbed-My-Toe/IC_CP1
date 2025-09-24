@@ -30,3 +30,12 @@ print(f"The hour is saved as an strng: {isinstance(hour, str)}")
 print(hour.isalpha())
 
 print(f"Hour has a value: {bool(True)}")
+
+#What can a Boolean hold? (i.e. what is a Boolean?)
+#What are Booleans normally used for?
+#What does bool() let you do?
+#What values are considered True? 
+#What values are considered False?
+#What are some python built-in functions that return a Boolean value?(Try and find 1 more than the example you are given!)
+#What are the simple data types?
+#What would you use each data type for?

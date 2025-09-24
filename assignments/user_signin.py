@@ -12,6 +12,7 @@ if credentials == "IsaacCovingtonFNV":
 #punish the wrongdoer
 elif credentials != "IsaacCovingtonFNV":
     print(random.choice(["You are not invited to my 11th birthday party.", "Your fingerprints look like fat pelicans.", "If you are just cranky, have a snickers."]))
+  
 else:
  print("L Bozo.")
 
