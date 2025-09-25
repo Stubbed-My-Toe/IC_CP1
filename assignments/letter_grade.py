@@ -19,6 +19,12 @@ elif grade >= 77 and grade<= 79:
 elif grade >= 72 and grade <= 76:
    print(f"You have {grade}% which is a C. Stay away from table saws.")
 elif grade >= 70 and grade <= 71:
-   print(f"You have {grade}% which is a C-. You’re the reason we have warning labels")
+   print(f"You have {grade}% which is a C-. You're the reason we have warning labels.")
 elif grade >= 67 and grade <= 69:
-   print(f"You have {grade}% which is a D+. I expected nothing, but I'm still disappointed")
+   print(f"You have {grade}% which is a D+. Sharp as a marble, you are.")
+elif grade >= 64 and grade <= 66:
+   print(f"You have {grade}% which is a D. I expected nothing, but I'm still disappointed.")
+elif grade >= 55 and grade <= 63:
+   print(f"You have {grade}% which is a D-. You're lucky breathing is involuntary.")
+elif grade >= 0 and grade <= 54:
+   print(f"You have {grade}% which is an F. Your intelligence is less real than your father.")
