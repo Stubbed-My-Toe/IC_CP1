@@ -15,14 +15,14 @@ def start_game():
             print(f"Sorry, you've used all {max_attempts} attempts. The number was {number_to_guess}.")
             game_over = True
             #changed if to elif
-        elif guess == number_to_guess:
+        elif float(guess == number_to_guess):
             print("Congratulations! You've guessed the number!")
             game_over = True
-        elif guess > number_to_guess:
+        elif float(guess > number_to_guess):
             print("Too high! Try again.")
             #added attempts when you get it wrong
             attempts = attempts + 1
-        elif guess < number_to_guess:
+        elif float(guess < number_to_guess):
             print("Too low! Try again.")
             attempts = attempts + 1
         #no idiot proof added else
