@@ -8,9 +8,16 @@
 numone = "2"
 numtwo = "5"
 
-print( numone + numtwo)
+print(numone + numtwo)
 
-# Have a well thought out plan, Step by step go through our logic
+# Have a well thought out 
 
 # Run-time Error
+import random
+while True:
+    denominator = random.randint(1, 5)
+    #brute force debugging kinda sucks. see one line below
+    print(f"denominator: {denominator}")
 
+    print(10/denominator)
+    #read the error that pops up in terminal, fix error
