@@ -28,3 +28,5 @@ elif grade >= 55 and grade <= 63:
    print(f"You have {grade}% which is a D-. You're lucky breathing is involuntary.")
 elif grade >= 0 and grade <= 54:
    print(f"You have {grade}% which is an F. Your intelligence is less real than your father.")
+else:
+   print("Either it's the low, low, chance my program is bugged, or, you can't even enter an input properly.")
