@@ -4,9 +4,7 @@ import random
 sibs = ["Alex", "Katie", "Andrew", "Tia", "Isaac", "Bruce", "Wayne", "Parker", "Jonah", "Brock"]
 
 print(sibs[5])
-print(random.choice(sibs, weights
-                    
-                    =(10,10,10,10,10,10,10,10,10,10), k=5))
+print(random.choice(sibs, weights=(10,10,10,10,10,10,10,10,10,10), k=5))
 print(f"The list is {len(sibs)} people long")
 print(sibs)
 sibs[0] = "Eric"
