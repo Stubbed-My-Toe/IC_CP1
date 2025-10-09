@@ -1,5 +1,197 @@
 IC 1st Tic Tac Toe Psuedocode
-show (_|_|_)
-     (_|_|_)
-      (| |)
-ask player "X or O?"
+
+import random
+
+1=1
+2=2
+3=3
+4=4
+5=5
+6=6
+7=7
+8=8
+9=9
+
+
+main game loop
+while True
+symbol: ask player "X or O?"
+player will enter X or O. strip answer, and uppercase
+if answer is not X or O:
+      show "please try again"
+else:
+      show "Your symbol is, {symbol}"
+
+computer gets other symbol
+
+display "This is the board" 
+grid _|_|_
+     _|_|_
+      | |
+      show grid
+
+main game loop
+while True:
+
+player's turn
+show "Please pick a number from the grid to put your symbol "
+diplay grid _1|_2_|3_
+            _4|_5_|6_
+             7| 8 |9
+
+while player's turn
+player win:
+      if 1 = symbol and 2 = symbol and 3 = symbol
+      display "player has won"
+      if 4 = symbol and 5 = symbol and 6 = symbol
+      display "player has won"
+      if 7 = symbol and 8 = symbol and 9 = symbol
+      display "player has won"
+      if 1 = symbol and 4 = symbol and 7 = symbol
+      display "player has won"
+      if 2 = symbol and 5 = symbol and 8 = symbol
+      display "player has won"
+      if 3 = symbol and 6 = symbol and 9 = symbol
+      display "player has won"
+      if 1 = symbol and 5 = symbol and 9 = symbol
+      display "player has won"
+      if 3 = symbol and 5 = symbol and 7 = symbol
+      display "player has won"
+else:
+      display " "
+
+if choice is 1
+      then 1 = 0:
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 2
+      then 2 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 3
+      then 3 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 4
+      then 4 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 5
+      then 5 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 6
+      then 6 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 7
+      then 7 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 8
+      then 8 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+if choice is 9
+      then 9 = 0
+            round +1
+            turn = computer
+      else pick again
+            continue
+else show "Your choice is invalid"
+
+computer's turn
+computer win:
+      if 1 = symbol and 2 = symbol and 3 = symbol
+      display "computer has won"
+      if 4 = symbol and 5 = symbol and 6 = symbol
+      display "computer has won"
+      if 7 = symbol and 8 = symbol and 9 = symbol
+      display "computer has won"
+      if 1 = symbol and 4 = symbol and 7 = symbol
+      display "computer has won"
+      if 2 = symbol and 5 = symbol and 8 = symbol
+      display "computer has won"
+      if 3 = symbol and 6 = symbol and 9 = symbol
+      display "computer has won"
+      if 1 = symbol and 5 = symbol and 9 = symbol
+      display "computer has won"
+      if 3 = symbol and 5 = symbol and 7 = symbol
+      display "computer has won"
+else:
+      display " "
+
+random.randint(1,9)
+if choice is 1
+      then 1 = 0:
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 2
+      then 2 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 3
+      then 3 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 4
+      then 4 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 5
+      then 5 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 6
+      then 6 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 7
+      then 7 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 8
+      then 8 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+if choice is 9
+      then 9 = 0
+            round +1
+            turn = player's
+      else pick again
+            continue
+else show "Your choice is invalid"
+if neither player or computer won 
+show "tie"
