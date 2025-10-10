@@ -193,5 +193,6 @@ if choice is 9
       else pick again
             continue
 else show "Your choice is invalid"
+
 if neither player or computer won 
-show "tie"
+      show "tie"
