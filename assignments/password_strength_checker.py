@@ -48,6 +48,8 @@ for i in characters:
         points = points + 1
         print("Your password contains a special character! +1 point")
         break
+    else:
+        continue
 
 for i in characters:
     num = i.isdigit()
@@ -55,6 +57,8 @@ for i in characters:
         points = points + 1
         print("Your password contains a number character! +1 point")
         break
+    else:
+        continue
 
 
 for i in characters:
@@ -63,6 +67,8 @@ for i in characters:
         points = points +1
         print("Your password contains a capital character! +1 point")
         break
+    else:
+        continue
 
 for i in characters:
     lowerc = i.islower()
@@ -70,6 +76,8 @@ for i in characters:
         points = points +1
         print("Your password contains a lowercase character! +1 point")
         break
+    else:
+        continue
 
 #Check each character isupper if at least one is. +1 point
 #Check each character islower if at least one is. +1 point
