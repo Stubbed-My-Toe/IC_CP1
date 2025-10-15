@@ -23,45 +23,54 @@ print("Hello! This is the Isaac Covington 2100 Password Strength Checker System;
 print("This program checks the strength of your password based on certain criteria, and gives you a score out of 5.")
 
 #ask for password, show requirements.
-print("Your password must have a length of 8 characters, contain at least one special character, contain at least one capital letter, one lowercase letter, and one number.\n Meeting one requirement gives you one point.")
+print("Your password must have a length of 8 characters, contain at least one special character, contain at least one capital letter, one lowercase letter, and one number.\nMeeting one requirement gives you one point.")
 #have user enter their password
 paswrd = input('What is your password?\n').strip()
 
 spec_char = ("!@{#$%^&*()_+-=[]}|;:,.<>?")
-numbers = ("1234567890")
+numbers = list("1234567890")
 points = 0
 length = len(paswrd)
 
 if length >= 8:
-    points + 1
+    points = points + 1
+    print("Your password is long enough! +1 point")
 else:
-    print("")
+    print("your password failed the length test.")
+
+
 #turn password into list.
-characters = (paswrd)
+characters = list(paswrd)
 #loop for i in password
 for i in characters:
     special = i in spec_char
     if special:
-        points + 1
-        print("Your points increased")
-    else:
-        print("This special check did not work")
+        points = points + 1
+        print("Your password contains a special character! +1 point")
+        break
+
+for i in characters:
     num = i.isdigit()
     if num:
-        points +1
-    else:
-        print("This num check did not work")
+        points = points + 1
+        print("Your password contains a number character! +1 point")
+        break
+
+
+for i in characters:
     upperc = i.isupper()
     if upperc:
-        points +1
-    else:
-        print('')
+        points = points +1
+        print("Your password contains a capital character! +1 point")
+        break
+
+for i in characters:
     lowerc = i.islower()
     if lowerc:
-        points +1
-    else:
-        print("")
-    
+        points = points +1
+        print("Your password contains a lowercase character! +1 point")
+        break
+
 #Check each character isupper if at least one is. +1 point
 #Check each character islower if at least one is. +1 point
 #if len(list) >= 8. +1 point
@@ -69,13 +78,14 @@ for i in characters:
 #check each character if it matches the things on special characters list.
 
 
-if points <= 2:
-   print("weak")
+if points < 3:
+   print("Your password strength is: weak")
 elif points == 3:
-   print("moderate")
+   print("Your password strength is: moderate")
 elif points == 4:
-    print ("strong")
+    print ("Your password strength is: strong")
 elif points == 5:
-    print("very strong")
+    print("Your password strength is: very strong")
 else:
-    print ('no points at all? \n Unfathomably weak')
+    points == 0
+    print ('no points at all? \n Your password strength is: weird')
