@@ -1,5 +1,16 @@
 #IC 1st function notes
 #Set variable first then we define all of our functions
+player_health = 100
+monster_health = 100 #<--global variable
+def damage(amount, turn): #<---\
+    if turn =="player":
+        return monster_health - amount, player_health
+    else:
+        return monster_health, player_health - amount #<----/local variables
+
+monster_health, player_health = damage(10, "player")
+print(f"Monster health: {monster_health}")
+print(f"Player health: {player_health}")
 
 def add(x, y):
     return x+y
@@ -7,7 +18,7 @@ def add(x, y):
 
 def initials(name):
     names = name.split(" ")
-    intitials = " "
+    initials = " "
     for name in names:
         initials+=name[0]
 
@@ -22,3 +33,4 @@ while x < add(3,9):
     x+= 1
 
 print("goose!")
+print(initials("Isaac Covington"))
