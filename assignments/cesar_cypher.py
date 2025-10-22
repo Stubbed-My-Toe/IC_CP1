@@ -5,7 +5,7 @@
 alphabet = ("abcdefghijklmnopqrstuvwxyz")
 #Ask what operation user wants to do
 operation =input("What operation do you want to do? Press 1 to encode. Press 2 to decode.\n").strip()
-raw_cipher = int(input("Please pick a number for the cesar cypher. A is at 0, B is at 1, C is at 2, and so on\n").strip())
+raw_cipher = int(input("Please pick a number for the cesar cypher.\n").strip())
 def shift():
     if raw_cipher >= 26:
         raw_cipher % 26
