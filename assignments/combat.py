@@ -6,16 +6,16 @@ name = input("What is your name?\n")
 grade = int(input("Press 1 if you are a fighter, 2 if you are a mage, and 3 if you are a rogue.\n"))
 diff = int(input("What is your desired difficulty of combat? Press 1 for easy, 2 for medium, and 3 for hard.\n"))
 
-def diff_mod():
-    if diff == 1:
-        print()
-    elif diff == 2:
-        print()
-    elif diff == 3:
-        print()
-    else:
-        print("Enter a valid number!")  
-        diff = 0
+
+if diff == 1:
+    
+elif diff == 2:
+    print()
+elif diff == 3:
+    print()
+else:
+    print("Enter a valid number!")  
+    diff = 0
 
         
 def stats():
