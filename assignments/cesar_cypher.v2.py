@@ -9,7 +9,7 @@ key = int(input("What is the key to the cipher?\n"))
 #figure out end index
 
 def shift(selected_letters):
-    selected_letters = alphabet[0:key]
+    s = alphabet[0:end_index]
     
 def cipher():
 #estalish alphabets
@@ -19,4 +19,5 @@ elif operation == 2:
     back_alphabet = "zyxwvutsrqponmlkjihgfedcba"
 else:
     print("You need to enter either 1 or 2")
+selected_letters = alphabet[0:key]
     
