@@ -19,7 +19,7 @@ rdefen = 7 + random.randint(1,5)
 rdam = random.randint(1,12)
 
 
-def easystats():
+def easystats(grade):
     if grade == 1:
         print("You are a fighter.\nThey specialize in combo building melee combat.\nFighters deal moderate damage, and have high health with moderate defense")
         print(f"Your stats are {fhealth} for your hp, {fdefen} and a random number from 1 to 8 for damage.")
@@ -36,7 +36,7 @@ def easystats():
         print("please enter a valid input for stats!")
 
 
-def medstats():
+def medstats(grade):
     if grade == 1:
         print("You are a fighter.\nThey specialize in combo building melee combat.\nFighters deal moderate damage, and have high health with moderate defense")
         print(f"Your stats are {fhealth} for your hp, {fdefen} and a random number from 1 to 8 for damage.")
@@ -53,7 +53,7 @@ def medstats():
         print("please enter a valid input for stats!")
 
 
-def hardstats():
+def hardstats(grade):
     if grade == 1:
         print("You are a fighter.\nThey specialize in combo building melee combat.\nFighters deal moderate damage, and have high health with moderate defense")
         print(f"Your stats are {fhealth} for your hp, {fdefen} and a random number from 1 to 8 for damage.")
@@ -71,8 +71,8 @@ def hardstats():
 
 
 if diff == 1:
-    print(easystats)
+    easystats(grade)
 elif diff == 2:
-    print(medstats)
+    medstats(grade)
 elif diff == 3:
-    print(hardstats)
+    hardstats(grade)
