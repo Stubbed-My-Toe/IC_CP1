@@ -44,7 +44,7 @@ time.sleep(1)
 screen.title("GO")
 #Make a while loop for the turtle's movements
 while True:
-    #show who might win and is they need to keep moving
+    #show who might win and if they need to keep moving
     if racer1.xcor() >= 500:
         screen.title("The pink turtle won!")
         break
