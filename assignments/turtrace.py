@@ -47,36 +47,32 @@ while True:
     #show who might win and is they need to keep moving
     if racer1.xcor() >= 500:
         screen.title("The pink turtle won!")
-        time.sleep(5)
         break
     else:
         racer1.forward(random.randint(10,30))
 
     if racer2.xcor() >= 500:
         screen.title("The red turtle won!")
-        time.sleep(5)
         break
     else:
         racer2.forward(random.randint(10,30))
 
     if racer3.xcor() >= 500:
         screen.title("The blue turtle won!")
-        time.sleep(5)
         break
     else:
         racer3.forward(random.randint(10,30))
-        time.sleep(5)
 
     if racer4.xcor() >= 500:
         screen.title("The green turtle won!")
-        time.sleep(5)
         break
     else:
         racer4.forward(random.randint(10,30))
         
     if racer5.xcor() >= 500:
         screen.title("The yellow turtle won!")
-        time.sleep(5)
         break
     else:
         racer5.forward(random.randint(10,30))
+
+time.sleep(5)
