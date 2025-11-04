@@ -1,16 +1,31 @@
 #IC 1st Maze generator py
 
 #Import turtle as t
+import turtle as t
+#import random
+import random
+import time
 #make screen and screen color
-#msakes maze turtle
-#maze width and height needs to be defined at least a six by six
+screen = t.Screen()
+screen.setup(width=800, height=800)
+screen.bgcolor("black")
+#make maze turtle
+turt = t.Turtle(), t.pencolor("white"), t.hideturtle(), t.teleport(600,600)
+turt.forward
+
+time.sleep(5)
+#maze width and height needs to be defined at least a six by six, or 600x600
+
 #Room for six paths to head straight down from top to bottom.
-#w == wall
-#P == path
+#room for six or more paths to go side to side
+#1 == wall
+#0 == path
 #[      ,
 #       ,
 #       ,
 #       ,]
 #inside of maze needs to be defined
+#grid_rows=[]
+#grid_columns=[1,1,1,1,#you get the gist]
 #Define start and end of maze
 #start making turtle make maze
