@@ -7,13 +7,30 @@ import random
 import time
 #make screen and screen color
 screen = t.Screen()
-screen.setup(width=800, height=800)
+screen.setup(800,800)
+screen.screensize(700,700)
 screen.bgcolor("black")
 #make maze turtle
-turt = t.Turtle(), t.pencolor("white"), t.hideturtle(), t.teleport(600,600)
-turt.forward
-
-time.sleep(5)
+turt = t.Turtle()
+turt.shape("turtle")
+turt.pencolor("white")
+turt.color("white")
+#define frame of maze which is 600x600
+frame = 600,600
+#def grid of maze.grid
+grid_rows=600/6
+grid_columns=[]
+#draw frame of maze
+turt.teleport(-300,-300)
+turt.forward(600)
+turt.left(90)
+turt.forward(600)
+turt.left(90)
+turt.forward(600)
+turt.left(90)
+turt.forward(600)
+screen.exitonclick()
+#if random.randint(1,2)==1:
 #maze width and height needs to be defined at least a six by six, or 600x600
 
 #Room for six paths to head straight down from top to bottom.
@@ -26,6 +43,8 @@ time.sleep(5)
 #       ,]
 #inside of maze needs to be defined
 #grid_rows=[]
+grid_rows=[]
+grid_columns=[]
 #grid_columns=[1,1,1,1,#you get the gist]
 #Define start and end of maze
 #start making turtle make maze
