@@ -15,6 +15,8 @@ turt = t.Turtle()
 turt.shape("turtle")
 turt.pencolor("white")
 turt.color("white")
+#Define turt start
+startpoint = turt.teleport(-300,-300)
 #define frame of maze which is 600x600 with 50px holes at 300x300 and -300x-300
 def frame():
     turt.teleport(-300,-300)
@@ -35,9 +37,24 @@ def frame():
 
 frame()
 #def grid of maze.grid
-def grid_column():
-    for(" ") in [ , , , , , ]
+ungrid =[" "," "," "," "," "," ",
+        " "," "," "," "," "," ",
+        " "," "," "," "," "," ",
+        " "," "," "," "," "," ",
+        " "," "," "," "," "," ",
+        " "," "," "," "," "," "]
 
+def grid_y():
+    len(ungrid)
+    print(len(ungrid))
+    for x, y in ungrid:
+        turt.teleport(startpoint)
+        turt.forward(600)
+        y
+grid_y()
+
+
+        
 screen.exitonclick()
 #if random.randint(1,2)==1:
 #maze width and height needs to be defined at least a six by six, or 600x600
