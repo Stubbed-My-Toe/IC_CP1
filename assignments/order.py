@@ -10,3 +10,32 @@
 #At the end, display the full order and the total cost
 #Implement error handling to handle invalid user input
 #Test the program thoroughly to ensure it works as expected
+
+#Menu
+#main_course={
+#"1).baja":1.95}
+#Drinks={}
+
+#sides={}
+
+#main_order=show(input("what do you want your main dish to be?\n Please enter the number of the item."))
+#print(main_course)
+#if main_order == 1
+    #blah blah blah= 2.18
+
+#side_order=show(input("please pick your side\n"))
+#print(sides)
+#if side_order==1
+   # blah blah= 4.20
+
+#side_order2=show(input("please pick your side\n"))
+#print(sides)
+#if side_order2==1
+   # blah blah= 4.20
+
+#drink=show(input("please pick your drink\n"))
+#print(drinks)
+#if side_order==1
+   # blah blah= 4.20
+
+    
