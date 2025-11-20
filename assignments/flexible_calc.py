@@ -12,11 +12,19 @@ operation=input("What operation do you want to perform? Sum, Average, Max, Min, 
 
 
 #def sum(x,b)
-def sum(*nums):
+def sum(*num_list,num):
 #nums = enter numbers
-nums=print("Enter numbers (type 'done' when finished):")
+    num_list = print("Enter numbers\n (type 'done' when finished):")
+    if num_list == float() or int():
+        print(f"Number:{list}")
+    elif num_list == "done":
+        for num in num_list:
+            
+    else:
+        print("Please try again later.")
+        return
+    
 
-#for num in nums
     #1+2+3+4+5 etc
     #=bleh
 
@@ -39,8 +47,18 @@ nums=print("Enter numbers (type 'done' when finished):")
 
 #have them keep putting num in until
 #stop when input = done
+
+
 #call func and do calculation
 #ask do you want to go again?
+yeon = input("Do you want to do another operation? y/n\n")
+if yeon == "y":
+    an_operation=input("What operation do you want to perform? Sum, Average, Max, Min, or Product?\n")
+
+
 #if input = yes keep going
 #reset nums
 #else= print thank you for using the calcuator! break
+elif yeon == "n":
+    print("Thank you for using the calculator.")
+    quit()
