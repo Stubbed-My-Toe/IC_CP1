@@ -12,27 +12,40 @@ operation=input("What operation do you want to perform? Sum, Average, Max, Min, 
 
 
 #def sum(x,b)
-def sum(*num_list,num):
+def sum(*num_list,):
 #nums = enter numbers
     num_list = print("Enter numbers\n (type 'done' when finished):")
     if num_list == float() or int():
-        print(f"Number:{list}")
+        print(f"Number:{num_list}")
     elif num_list == "done":
         for num in num_list:
-            
+            #1+2+3+4+5 etc
+            tot_sum += num
     else:
-        print("Please try again later.")
+        print("Please try again.")
         return
     
 
-    #1+2+3+4+5 etc
-    #=bleh
 
 #def average()
-#for num in nums, add number and divide by how many numbers there are
-    #(1+2+3)/3
+def average(*num_list):
+    num_list = print("Enter numbers\n (type 'done' when finished):")
+    if num_list == float() or int():
+        print(f"Number:{num_list}")
+    elif num_list == "done":
+        for num in num_list:
+            #1+2+3+4+5 etc
+            #for num in nums, add number and divide by how many numbers there are
+            #(1+2+3)/3
+            tot_sum = ((tot_sum + num)/num_list.len())
+    else:
+        print("Please try again.")
+        return
 
+    
 #def max()
+def max():
+    
 #what is the highest number in the list?
 #organize them by value and pick the index with the highest number
 
