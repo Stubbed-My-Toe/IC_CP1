@@ -60,7 +60,7 @@ def max_op(*num_list,max_num):
         print("Please try again.")
         return
 #what is the highest number in the list?
-#organize them by value and pick the index with the highest number
+#organize them by value and pick the index with the highest number?
 
 #defmin()
 def min_op(*num_list,min_num):
@@ -77,6 +77,7 @@ def min_op(*num_list,min_num):
         return
 
 #defproduct()
+def product
 #product_answ = x*b*c
 
 
