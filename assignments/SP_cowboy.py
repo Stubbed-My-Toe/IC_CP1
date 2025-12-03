@@ -1,11 +1,18 @@
 #IC 1st Final Project: SP Cowboy
 
 #will be a rogue-like where the player can pick up items and upgrades and eventually get to the boss to fight them.
+#inspired by titles such as borderlands, fallout, and evil west
 
 #import random
 #import time
 
-#############################################################################################################################################
+#####################################################################################################################################################################################################################################################################################
+
+#STATS FOR COMBAT
+
+
+
+#####################################################################################################################################################################################################################################################################################
 
 #STATS FOR SURVIVAL
     #These make sure that the player does not die instantly, or so the player can get really strong. Are meant to be unbalanced.
@@ -38,7 +45,8 @@
 
 
 
-#############################################################################################################################################
+
+#####################################################################################################################################################################################################################################################################################
 
 #3 CLASSES 
     #with different stats like dodge, health, defense and carry weight
@@ -62,7 +70,62 @@
     #High health, low speed. Very noticeable.
 
 
-#############################################################################################################################################
+#####################################################################################################################################################################################################################################################################################
 
 #ROOMS
-    #Rooms come in 7 classes.
+    #Rooms come in 6 classes.
+    #They are randomly selected, but some have lower chances of showing up
+    #Enemies can spawn in any room except r&m rooms and merchant rooms.
+    #Boss rooms are on a timer to appear. Every six rooms, a message will appear asking if the player wants to fight the boss.
+
+    #LOOT ROOMS
+        #These have weapons, loot, and armor as well as special items in them.
+
+    #FIGHT ROOMS
+        #As the name suggests these are rooms with enemies specifically designed for combat. Enemies will mostly be encountered in these rooms.
+
+    #MERCHANT ROOMS
+        #This is where currency is used to buy items such as implants, weapons, and protection
+
+    #BOSS ROOMS
+        #Rooms where bosses will be encountered and fought.
+
+    #REST & MAINTENANCE ROOMS
+        #Where the player can rest, and recover. Enemies cannot spawn here. If the player dies, they will show back up at their most recent r&m room, but missing their most powerful weapon (implants do not count) and at 1/2 health.
+
+    #TRAP ROOMS
+        #Trap rooms are rooms that can contain loot as well as enemies. They will show up as a fight room, but will have traps in them.
+
+
+#####################################################################################################################################################################################################################################################################################
+
+#ITEMS
+    #Items come in 4 categories: Weapons, Implants, Consumables, and Valuables.
+
+
+#WEAPONS
+    #Weapons have 4 sub-categories: Projectile, Melee, Explosive, and Improvised; SUB-CATEGORIES GALORE!
+        #PROJECTILE
+            #These 
+
+        #MELEE
+
+
+        #EXPLOSIVE
+
+
+        #IMPROVISED
+
+
+
+#IMPLANTS
+
+
+#CONSUMABLES
+
+
+#VALUABLES
+
+
+
+#####################################################################################################################################################################################################################################################################################
