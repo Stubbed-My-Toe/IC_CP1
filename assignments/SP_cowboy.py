@@ -1,12 +1,15 @@
 #IC 1st Final Project: SP Cowboy
 
 #will be a rogue-lite where the player can pick up items and upgrades and eventually get to the boss to fight them.
-#inspired by titles such as borderlands, fallout, and evil west
+#inspired by titles such as borderlands, fallout, and rogue
 
 #import random
 #import time
 
 
+
+
+#PART 1: THE DESIGNING OF STATS AND FUNCTIONS
 ###########################################################################################################################################################################################################################################################################################################
 
 #STATS FOR COMBAT
@@ -15,10 +18,22 @@
 
     #DAMAGE
         #There are a few types of damage that are dealt by different weapons.
-        
+        #Attack means the player will want to do some form of damage to the enemy.
+        #If the attack is not guaranteed to hit, it will pass through the accuracy check. If the accuracy stat is not as high as the enemies dodge stat, the player will not be able to hit them.
+        #The damage variable will be used and passed through whatever function the attack is.
+        #This will determine if the player will be able to hit.
+
+        #MELEE
+            #The player attacks, if their strength is high enough, they can do quite a bit of damage. (Guaranteed to hit)
+            #The player actually has to get close enough to hit them, so they need to pass a dodge check
+            #If dodge check is passed, the player can hit the enemy and will stay in range unless the enemy decides to back up. If failed, the player will be at the mercy of a counter-attack by the enemy.
+            #When in range, the player will always hit their melee attack
+
 
     #ACCURACY
         #Determines if the player will hit where they want to hit.
+        #Will usually be determined by the player *accuracy* stat. Some guns have accuracy stats that just add to the player's accuracy stat.
+        #
 
     #STRENGTH
         #affects how much damage the player will do for melee attacks.
@@ -81,7 +96,7 @@
     #Rooms come in 6 classes.
     #They are randomly selected, but some have lower chances of showing up
     #Enemies can spawn in any room except r&m rooms and merchant rooms.
-    #Boss rooms are on a timer to appear. Every six rooms, a message will appear asking if the player wants to fight the boss.
+    #Boss rooms require tickets*
 
     #LOOT ROOMS
         #These have weapons, loot, and armor as well as special items in them.
@@ -91,6 +106,7 @@
 
     #MERCHANT ROOMS
         #This is where currency is used to buy items such as implants, weapons, and protection
+        #*The merchants have something called boss tickets. These will take players to boss rooms if used.
 
     #BOSS ROOMS
         #Rooms where bosses will be encountered and fought.
@@ -150,4 +166,14 @@
         #Guys with special guns, and based off of the classes
 
     #ELITE VARIANTS
-        #Variants of enemies, but way more busted
+        #Variants of enemies, but way more busted than the originals.
+
+
+#############################################################################################################################################################################################################################################################################################################
+
+#THE CYLINDER (Is like a revolver barrel)
+    #This might be the most important thing in the entire game.
+    #Every room that is visited, the cylinder will go down one bullet
+    #Every bullet that dissapears, enemies gain +2% to all their stats.
+    #Every 2 bullets that dissapear allows the player to increase the strength of a power slightly.
+    #When the last bullet dissapears, the enemies gain +10% to their stats, but the player gets to 'draw' an ability.
