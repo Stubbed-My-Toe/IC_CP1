@@ -33,10 +33,15 @@
     #ACCURACY
         #Determines if the player will hit where they want to hit.
         #Will usually be determined by the player *accuracy* stat. Some guns have accuracy stats that just add to the player's accuracy stat.
-        #
+        #If the player does a ranged attack, their accuracy stat comes into play.
+        #There is the  base accuracy stat and the rolled accuracy stat. The rolled accuracy is added to the base accuracy.
+        #If the enemy has a dodge stat that is higher than the accuracy stat, they will not be hit by the attack.
+
 
     #STRENGTH
-        #affects how much damage the player will do for melee attacks.
+        #Affects how much damage the player will do for melee attacks.
+        #Is factored into the armor penetration, because it smashes with weight.
+        #Is divided by 5, and added to the armor penetration stat.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -169,11 +174,11 @@
         #Variants of enemies, but way more busted than the originals.
 
 
-#############################################################################################################################################################################################################################################################################################################
+###########################################################################################################################################################################################################################################################################################################
 
-#THE CYLINDER (Is like a revolver barrel)
+#THE CYLINDER (It looks like a revolver barrel)
     #This might be the most important thing in the entire game.
-    #Every room that is visited, the cylinder will go down one bullet
+    #Every room that is visited, the cylinder will go down one bullet.
     #Every bullet that dissapears, enemies gain +2% to all their stats.
-    #Every 2 bullets that dissapear allows the player to increase the strength of a power slightly.
+    #Every 2 bullets that dissapear allows the player to increase the strength of a stat or power slightly.
     #When the last bullet dissapears, the enemies gain +10% to their stats, but the player gets to 'draw' an ability.
