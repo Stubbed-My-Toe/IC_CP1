@@ -40,8 +40,7 @@
 
     #STRENGTH
         #Affects how much damage the player will do for melee attacks.
-        #Is factored into the armor penetration, because it smashes with weight.
-        #Is divided by 5, and added to the armor penetration stat.
+        #Strength is divided by 5 and then added onto the weapon's damage.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -68,7 +67,7 @@
 
     #CARRY
         #determines how much the player can lift. Starts at 150 but can go up with upgrades and certain classes' abilities.
-        #Determines how much the player can lift. will sort of work like the weight function in fallout. Too much weight (over 65% of max) leads to a decrease in speed. Called mule in gameplay.
+        #Determines how much the player can lift. will sort of work like the weight function in fallout. Too much weight (70% of max) leads to a decrease in speed. Called mule in gameplay.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -81,18 +80,25 @@
         #Very stealthy and melee focused in combat. Can still use guns, especially those with stealth aspects.
         #Pretty fast, but low health and carry weight.
         #Has stealth attacks.
+            #Stealth attacks do 1.5 damage at base, can be increased with some items.
+        #Has a base health of 50
+        #Has a dodge of 70 at base
+        #Defense of 70 at base
+        #Carry starts at 120, with accuracy at 60, strength at 110
 
 
     #Gunslinger
         #Is average in speed, but is proficient in guns. Pretty decent health
         #Carry weight is pretty good, but a stat called "dexterity" allows them to move more quickly when carrying heavy stuff.
         #Has special action called "quick draw" which allows them to fire very quickly.
-
+            #quickdraw: Allows the player to get the bonus of 2 shots in on guns per turn
+        #70 base health, Carry weight is 150 but has a overload weight of 80%, dodge is 50 at base, with accuracy at 100, and strength at 50.
 
     #Grenadier
         #The Tank of the classes. Due to using explosives, they have developed to be very strong which positively affects carry weight
         #Can craft and use explosives, as well as being able to carry a surplus of explosives.
         #High health, low speed. Very noticeable.
+        #Health starts at 110, and dodge is at 30, and carry is 190, and accuracy is 80, and strength at 80, and defense is at 80.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -102,12 +108,15 @@
     #They are randomly selected, but some have lower chances of showing up
     #Enemies can spawn in any room except r&m rooms and merchant rooms.
     #Boss rooms require tickets*
+    #The rooms will be randomly generated, and when entered, the room number will get put on a list, which determines the order of the rooms.
 
     #LOOT ROOMS
         #These have weapons, loot, and armor as well as special items in them.
+        #These have a few locations where the items have numbers assigne to them that the randomizer is going to find it in a list and put it there.
 
     #FIGHT ROOMS
         #As the name suggests these are rooms with enemies specifically designed for combat. Enemies will mostly be encountered in these rooms.
+        #Enemies can spawn here, but there are still a few locations where loot can spawn.
 
     #MERCHANT ROOMS
         #This is where currency is used to buy items such as implants, weapons, and protection
@@ -115,12 +124,15 @@
 
     #BOSS ROOMS
         #Rooms where bosses will be encountered and fought.
+        #The tickets will be connected to functions that when activated will take tthe player to the room
 
     #REST & MAINTENANCE ROOMS
         #Where the player can rest, and recover. Enemies cannot spawn here. If the player dies, they will show back up at their most recent r&m room, but missing their most powerful weapon (implants do not count) and at 1/2 health.
+        #Each weapon has a score assigned based on stats. the item with the highest score will be deleted.
 
     #TRAP ROOMS
-        #Trap rooms are rooms that can contain loot as well as enemies. They will show up as a fight room, but will have traps in them.
+        #Trap rooms are rooms that can contain enemies and a little loot. They will show up as a fight room, but will have traps in them.
+        #The traps will be things like strings connected to gold coins, and floorboards that fall through.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -139,21 +151,27 @@
 
             #EXPLOSIVE
                 #BIG BOOM, VERY DANGEROUS
+                #Will have a fuction that determines if the enemy is close at all, if so, they will take tons of damage.
 
             #IMPROVISED
                 #This is like stabbing someone with a table leg, or throwing a fork. It works?
+                #Made by doing things like breaking chairs.
 
 
     #IMPLANTS
         #Stuff like coal powered arms.
+        #These can be put on and off only in rest rooms.
+        #They provide bonuses to physical stats and some provide powers.
 
 
     #CONSUMABLES
         #Ammo, bandages, armor, and anything that can be consumed in some way.
+        #These will be used and not be able to be unused. Ammo will be consumed on firing, bandages, on healing, and etc.
 
 
     #VALUABLES
         #Pretty much anyhting can be sold. These are meant to be sold and used to buy things.
+        #Can be sold to merchants for money.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -163,15 +181,26 @@
 
     #BOSSES
         #The big bads
+        #They are big and evil.
+        #With lots of health, abilities and more.
+        #On death, random items will be chosen and dropped
 
     #FODDER
         #The meh enemies, basic revolvers and items, but still dangerous
+        #Spawn the most commonly in the game.
+        #Will have the same stats as the player, but only a few abilities called 'shoot', and other basic names and and basic melees.
+        #Each attack is chosen at random, but in melee they will only do melee
 
     #SPECIALS
-        #Guys with special guns, and based off of the classes
+        #Guys with special weapons, and based off of the classes.
+        #Class they are based off of will be randomly assigned.
+        #If one class is chosen, they will specifically do only certain moves that make sense for that class.
+        #Nearly exactly like the player but will be randomly assigned a ranged and melee weapon of a certain score range.
 
     #ELITE VARIANTS
         #Variants of enemies, but way more busted than the originals.
+        #Gain special abilities such as only doing fire damage. 
+        #Will be given higher tier loot.
 
 
 ###########################################################################################################################################################################################################################################################################################################
@@ -181,4 +210,4 @@
     #Every room that is visited, the cylinder will go down one bullet.
     #Every bullet that dissapears, enemies gain +2% to all their stats.
     #Every 2 bullets that dissapear allows the player to increase the strength of a stat or power slightly.
-    #When the last bullet dissapears, the enemies gain +10% to their stats, but the player gets to 'draw' an ability.
+    #When the last bullet dissapears, the enemies gain +10% to their stats, but the player gets to 'draw' an ability that is chosen at random.
