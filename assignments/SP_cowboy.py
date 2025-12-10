@@ -50,59 +50,18 @@ B_carry = 150
 
 ###########################################################################################################################################################################################################################################################################################################
 
-#STATS FOR COMBAT
-    #These are stats that directly affect combat scenarios.
-
-
-    #DAMAGE
-        #There are a few types of damage that are dealt by different weapons.
-def damage():
-    
-        #Attack means the player will want to do some form of damage to the enemy.
-        #If the attack is not guaranteed to hit, it will pass through the accuracy check. If the accuracy stat is not as high as the enemies dodge stat, the player will not be able to hit them.
-        #The damage variable will be used and passed through whatever function the attack is.
-        #This will determine if the player will be able to hit.
-
-        #MELEE
-            #The player attacks, if their strength is high enough, they can do quite a bit of damage. (Guaranteed to hit)
-            #The player actually has to get close enough to hit them, so they need to pass a dodge check
-            #If dodge check is passed, the player can hit the enemy and will stay in range unless the enemy decides to back up. If failed, the player will be at the mercy of a counter-attack by the enemy.
-            #When in range, the player will always hit their melee attack
-
-
-    #ACCURACY
-        #Determines if the player will hit where they want to hit.
-        #Will usually be determined by the player *accuracy* stat. Some guns have accuracy stats that just add to the player's accuracy stat.
-        #If the player does a ranged attack, their accuracy stat comes into play.
-        #There is the  base accuracy stat and the rolled accuracy stat. The rolled accuracy is added to the base accuracy.
-        #If the enemy has a dodge stat that is higher than the accuracy stat, they will not be hit by the attack.
-
-
-    #STRENGTH
-        #Affects how much damage the player will do for melee attacks.
-        #Strength is divided by 5 and then added onto the weapon's damage.
-
-
-###########################################################################################################################################################################################################################################################################################################
-
 #3 CLASSES 
 classes = {
     #with different stats like dodge, health, defense and carry weight
 
 
     #Guerilla (only one with stealth at base)
-    "Guerilla" : {B_dodge:80, 
-        B_health:50,
-        B_defen:70,
-        B_carry:120,
-        B_accur:60
-        B_stren:11
-        }
+    "Guerilla" : {B_dodge:80,}
         #Very stealthy and melee focused in combat. Can still use guns, especially those with stealth aspects.
         #Pretty fast, but low health and carry weight.
         #Has stealth attacks.
             #Stealth attacks do 1.5 damage at base, can be increased with some items.
-            #Can be activated in combat if the enemy's defense stat is not as high as the speed stat and can only be performed thrice in combat.
+            #Can be activated in combat if the enemy's defense stat is not as high as the speed stat
         #Has a base health of 50
         #Has a dodge of 80 at base
         #Defense of 70 at base
@@ -160,6 +119,39 @@ classes = {
     #VALUABLES
         #Pretty much anyhting can be sold. These are meant to be sold and used to buy things.
         #Can be sold to merchants for money.
+
+
+###########################################################################################################################################################################################################################################################################################################
+
+#STATS FOR COMBAT
+    #These are stats that directly affect combat scenarios.
+
+
+    #DAMAGE
+        #There are a few types of damage that are dealt by different weapons.
+        #Attack means the player will want to do some form of damage to the enemy.
+        #If the attack is not guaranteed to hit, it will pass through the accuracy check. If the accuracy stat is not as high as the enemies dodge stat, the player will not be able to hit them.
+        #The damage variable will be used and passed through whatever function the attack is.
+        #This will determine if the player will be able to hit.
+
+        #MELEE
+            #The player attacks, if their strength is high enough, they can do quite a bit of damage. (Guaranteed to hit)
+            #The player actually has to get close enough to hit them, so they need to pass a dodge check
+            #If dodge check is passed, the player can hit the enemy and will stay in range unless the enemy decides to back up. If failed, the player will be at the mercy of a counter-attack by the enemy.
+            #When in range, the player will always hit their melee attack
+
+
+    #ACCURACY
+        #Determines if the player will hit where they want to hit.
+        #Will usually be determined by the player *accuracy* stat. Some guns have accuracy stats that just add to the player's accuracy stat.
+        #If the player does a ranged attack, their accuracy stat comes into play.
+        #There is the  base accuracy stat and the rolled accuracy stat. The rolled accuracy is added to the base accuracy.
+        #If the enemy has a dodge stat that is higher than the accuracy stat, they will not be hit by the attack.
+
+
+    #STRENGTH
+        #Affects how much damage the player will do for melee attacks.
+        #Strength is divided by 5 and then added onto the weapon's damage.
 
 
 ###########################################################################################################################################################################################################################################################################################################
