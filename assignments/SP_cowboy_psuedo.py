@@ -83,7 +83,7 @@ B_carry = 150
 
     #STEALTH
         #The stealth stat determines if the player can get past certain interactions with enemies and NPCs
-        #If stealth is higher than an enemies stealth stat, they will most likely not be noticed and will have the advantage to perform a special action on their enemy.
+        #If stealth is higher than an enemies accuracy stat, they will most likely not be noticed and will have the advantage to perform a special action on their enemy.
         #Guerilla is the only class that starts with stealth
 
 
@@ -186,13 +186,13 @@ classes = {
         #Carry weight is pretty good, but a stat called "dexterity" allows them to move more quickly when carrying heavy stuff.
         #Has special action called "quick draw" which allows them to fire very quickly.
             #quickdraw: Allows the player to get the bonus of 2 shots in on guns per turn
-        #70 base health, Carry weight is 150 but has a overload weight of 80%, dodge is 50 at base, with accuracy at 100, and strength at 50.
+        #70 base health, Carry weight is 150 but has a overload weight of 80%, dodge is 50 at base, with accuracy at 100, and strength at 70.
 
     #Grenadier (Big boom guy)
         #The Tank of the classes. Due to using explosives, they have developed to be very strong which positively affects carry weight
         #Can craft and use explosives, as well as being able to carry a surplus of explosives.
         #High health, low speed. Very noticeable.
-        #Health starts at 110, and dodge is at 30, and carry is 190, and accuracy is 80, and strength at 80, and defense is at 80.
+        #Health starts at 110, and dodge is at 40, and carry is 190, and accuracy is 80, and strength at 80, and defense is at 80.
 }
 
 
