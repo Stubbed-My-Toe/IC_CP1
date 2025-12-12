@@ -5,14 +5,14 @@ import time
 
 
 #Classes and stats
-B_dodge=int()
-B_health=int()
-B_accur=int()
-B_defen=int()
-B_carry=int()
-B_stealth=int()
-B_stren=int()
-B_damage=int()
+B_health  = "health"
+B_defen   = "defense"
+B_dodge   = "dodge"
+B_carry   = "carry"
+B_accur   = "accuracy"
+B_stealth = "stealth"
+B_stren   = "strength"
+B_damage  = "damage"
 
 classes = {
     "Guerilla":{
@@ -50,6 +50,7 @@ while True:
     if chosen_class == 1:
         class_are_you_sure=int(input("Are you sure? Once you selct this class you cannot change it at any time. Type 1 to continue with your selection, type 2 to go back and pick a different character.\n")).strip()
         if class_are_you_sure == 1:
+                name = "Guerilla"
                 player_stats ={
                     B_health: classes["Guerilla"][B_health],
                     B_defen: classes["Guerilla"][B_defen],
@@ -61,11 +62,13 @@ while True:
                 },
                 break
         else:
-              continue
+            print("Going back.")
+            continue
         
     elif chosen_class == 2:
         class_are_you_sure=int(input("Are you sure? Once you selct this class you cannot change it at any time. Type 1 to continue with your selection, type 2 to go back and pick a different character.\n")).strip()
         if class_are_you_sure == 1:
+                name = "Gunslinger"
                 player_stats ={
                     B_health: classes["Gunslinger"][B_health],
                     B_defen: classes["Gunslinger"][B_defen],
@@ -77,12 +80,13 @@ while True:
                 },
                 break
         else:
-              continue
+            print("Going back.")
+            continue
         
     elif chosen_class == 3:
-    
         class_are_you_sure=int(input("Are you sure? Once you selct this class you cannot change it at any time. Type 1 to continue with your selection, type 2 to go back and pick a different character.\n")).strip()
         if class_are_you_sure == 1:
+                name = "Grenadier"
                 player_stats ={
                     B_health: classes["Grenadier"][B_health],
                     B_defen: classes["Grenadier"][B_defen],
@@ -94,18 +98,46 @@ while True:
                 }
                 break
         else:
-              continue
+            print("Going back.")
+            continue
     
     elif chosen_class==4:
         continue
     
     else:
         continue
-exit
+
+print("\nClass selected:", name)
+print("Stats:", player_stats)
 
 #Combat things
 
+#Weight system
+def equip_weight(item_weight):
+    player_stats[B_carry]-= item_weight
+
+def use_unequip_weight(item_weight):
+     player_stats[B_carry]-=item_weight
+
+
 #Items (Just the baseline for now)
-"Basic Revolver"={
-    B_damage:25
+Basic_Revolver={
+    B_damage:25,
+    B_accur:15,
+    "weight":15
 }
+
+def Health_Potion(item):
+    "heal" = 25
+    "weight"= 2.5
+
+def healing():
+    player_stats[B_health] += 25
+
+
+def Armor():
+    player_stats[B_carry]+=5
+
+def apply_armor():
+    player_stats[B_defen]+=25
+    player_stats[B_carry]-=5
