@@ -5,14 +5,16 @@ import time
 
 
 #Classes and stats
-B_health  = "health"
-B_defen   = "defense"
-B_dodge   = "dodge"
-B_carry   = "carry"
-B_accur   = "accuracy"
-B_stealth = "stealth"
-B_stren   = "strength"
-B_damage  = "damage"
+M_health = "max health"
+C_health = "current health"
+C_defen = "defense"
+C_dodge = "dodge"
+M_carry = "max carry weight"
+C_carry = "current carry weight"
+C_accur = "accuracy"
+C_stealth = "stealth"
+C_stren = "strength"
+C_damage = "damage"
 
 classes = {
     "Guerilla":{
@@ -70,7 +72,7 @@ while True:
         if class_are_you_sure == 1:
                 name = "Gunslinger"
                 player_stats ={
-                    B_health: classes["Gunslinger"][B_health],
+                    B_health: classes["Gunslinger"][M_health],
                     B_defen: classes["Gunslinger"][B_defen],
                     B_dodge: classes["Gunslinger"][B_dodge],
                     B_carry: classes["Gunslinger"][B_carry],
@@ -112,32 +114,37 @@ print("Stats:", player_stats)
 
 #Combat things
 
+
+
 #Weight system
-def equip_weight(item_weight):
-    player_stats[B_carry]-= item_weight
+def pickup(item):
+    player_stats[B_carry] += item
 
-def use_unequip_weight(item_weight):
-     player_stats[B_carry]-=item_weight
+def use(item):
+     player_stats[B_carry]-=item
 
+#Inventory
+max = player_stats[B_carry]
 
 #Items (Just the baseline for now)
 Basic_Revolver={
-    B_damage:25,
+    B_damage:30,
     B_accur:15,
     "weight":15
 }
 
-def Health_Potion(item):
-    "heal" = 25
-    "weight"= 2.5
+def Health_Potion():
+    "heal" = 5
+    "weight" = 2.5
 
 def healing():
     player_stats[B_health] += 25
 
-
-def Armor():
+def armor():
     player_stats[B_carry]+=5
 
 def apply_armor():
     player_stats[B_defen]+=25
     player_stats[B_carry]-=5
+
+
