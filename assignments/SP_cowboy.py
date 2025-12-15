@@ -23,6 +23,7 @@ C_accur = "current accuracy"
 C_stealth = "current stealth"
 C_stren = "current strength"
 C_damage = "damage"
+money = int()
 
 classes = {
     "Guerilla":{
@@ -68,7 +69,8 @@ while True:
                     M_carry: classes["Guerilla"][M_carry],
                     C_accur: classes["Guerilla"][C_accur],
                     C_stren: classes["Guerilla"][C_stren],
-                    C_stealth: classes["Guerilla"][C_stealth]
+                    C_stealth: classes["Guerilla"][C_stealth],
+                    money: 0
                 },
                 break
         else:
@@ -86,7 +88,8 @@ while True:
                     M_carry: classes["Gunslinger"][M_carry],
                     C_accur: classes["Gunslinger"][C_accur],
                     C_stren: classes["Gunslinger"][C_stren],
-                    C_stealth: classes["Gunslinger"][C_stealth]
+                    C_stealth: classes["Gunslinger"][C_stealth],
+                    money:0
                 },
                 break
         else:
@@ -104,7 +107,9 @@ while True:
                     M_carry: classes["Grenadier"][M_carry],
                     C_accur: classes["Grenadier"][C_accur],
                     C_stren: classes["Grenadier"][C_stren],
-                    C_stealth: classes["Grenadier"][C_stealth]
+                    C_stealth: classes["Grenadier"][C_stealth],
+                    money:0
+
                 }
                 break
         else:
@@ -135,21 +140,22 @@ Basic_Revolver={
     "weight":10
 }
 
-def Health_Potion():
-    "heal" = 45
-    "weight" = 2.5
-    "ID" = 1
-
+Health_Potion={
+    "heal" : 45,
+    "weight" : 2.5,
+    "ID" : 1,
+    "Price" : 45
+}
 def healing():
     player_stats[C_health] += Health_Potion["heal"]
 
-def armor():
-    "defense" = 30
-    "ID" = 2
-
+armor={
+    "defense" : 30,
+    "ID" : 2,
+    "price" : 20
+}
 def apply_armor():
     player_stats[C_defen]+=25
-    player_stats[M_carry]-=5
 
 #Inventory
 max = player_stats[M_carry]
@@ -180,16 +186,26 @@ Basic_enemies={
 loot_locations = ["Left Corner", "Right Corner", "Upper Shelf", "Lower Shelf", "Basket", "Cabinet", "Crate", "Chest", "Desk"]
 #Loot rooms
 Loot_rooms={
-    "Description": "Rather dusty inside, with cobwebs in the corners. From where you stand, you can see some loot lying around the room.",
+    "Description": "A dusty room, with cobwebs in the corners. From where you stand, you can see some loot lying around the room.",
     "Enemies":2,
     "Loot":5
 }
 #fight rooms
 Fight_rooms={
-    "Description":"Dark, musty room, with bullet casings littering the floor. Many have come here recently, but you get a feeling not many have left.",
+    "Description":"A dark, musty room, bullet casings littering the floor. Many have come here recently, but you get a feeling not many have left.",
     "Enemies":4,
     "Loot": 2
 }
+#Merchants
+for_sale={
+    "armor_plates" : apply_armor,
+    "Healing Potion": Healing_Potion
+    
+}
+def merchant():
+    while merchant==True:
+        print("*As you enter the room, a friendly-looking merchant waves for you to come over.*\n Merchant: Welcome to my humble shoppe! Please respect the merchandise!")
+        print(for_sale.items())
 
 
 

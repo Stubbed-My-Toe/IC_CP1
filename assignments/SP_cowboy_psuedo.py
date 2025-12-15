@@ -167,9 +167,9 @@ classes = {
         B_health:50,
         B_defen:70,
         B_carry:120,
-        B_accur:60
+        B_accur:60,
         B_stren:110
-        }
+        },
         #Very stealthy and melee focused in combat. Can still use guns, especially those with stealth aspects.
         #Pretty fast, but low health and carry weight.
         #Has stealth attacks.
