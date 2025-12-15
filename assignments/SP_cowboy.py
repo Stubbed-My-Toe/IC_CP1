@@ -7,42 +7,50 @@ import time
 #Classes and stats
 M_health = "max health"
 C_health = "current health"
-C_defen = "defense"
-C_dodge = "dodge"
+def health():
+    if C_health <= M_health:
+        print(f"{C_health}/{M_health} hp")
+    elif C_health > M_health:
+        C_health-=(C_health-M_health)
+    else:
+        print("Idk how you did this one. Get my help I guess?")
+
+C_defen = "current defense"
+C_dodge = "current dodge"
 M_carry = "max carry weight"
 C_carry = "current carry weight"
-C_accur = "accuracy"
-C_stealth = "stealth"
-C_stren = "strength"
+C_accur = "current accuracy"
+C_stealth = "current stealth"
+C_stren = "current strength"
 C_damage = "damage"
 
 classes = {
     "Guerilla":{
-        B_health:50,
-        B_defen:70,
-        B_dodge:80,        
-        B_carry:120,
-        B_accur:60,
-        B_stren:110,
-        B_stealth:65
+        M_health:60,
+        C_defen:70,
+        C_dodge:80,        
+        M_carry:120,
+        C_accur:60,
+        C_stren:110,
+        C_stealth:65
     },
     "Gunslinger":{
-        B_health:70,
-        B_defen:70,
-        B_dodge:50,
-        B_carry:150,
-        B_accur:100,
-        B_stren:70,
-        B_stealth:0
+        M_health:80,
+        C_defen:70,
+        C_dodge:50,
+        M_carry:150,
+        C_accur:100,
+        C_stren:70,
+        C_stealth:0
     },
     "Grenadier":{
-        B_health:110,
-        B_defen:80,
-        B_dodge:40,
-        B_carry:190,
-        B_accur:80,
-        B_stren:80,
-        B_stealth:0
+        M_health:100,
+        C_defen:80,
+        C_dodge:40,
+        M_carry:190,
+        C_accur:80,
+        C_stren:80,
+        C_stealth:0
     }
 }
 
@@ -54,13 +62,13 @@ while True:
         if class_are_you_sure == 1:
                 name = "Guerilla"
                 player_stats ={
-                    B_health: classes["Guerilla"][B_health],
-                    B_defen: classes["Guerilla"][B_defen],
-                    B_dodge: classes["Guerilla"][B_dodge],
-                    B_carry: classes["Guerilla"][B_carry],
-                    B_accur: classes["Guerilla"][B_accur],
-                    B_stren: classes["Guerilla"][B_stren],
-                    B_stealth: classes["Guerilla"][B_stealth]
+                    M_health: classes["Guerilla"][M_health],
+                    C_defen: classes["Guerilla"][C_defen],
+                    C_dodge: classes["Guerilla"][C_dodge],
+                    M_carry: classes["Guerilla"][M_carry],
+                    C_accur: classes["Guerilla"][C_accur],
+                    C_stren: classes["Guerilla"][C_stren],
+                    C_stealth: classes["Guerilla"][C_stealth]
                 },
                 break
         else:
@@ -72,13 +80,13 @@ while True:
         if class_are_you_sure == 1:
                 name = "Gunslinger"
                 player_stats ={
-                    B_health: classes["Gunslinger"][M_health],
-                    B_defen: classes["Gunslinger"][B_defen],
-                    B_dodge: classes["Gunslinger"][B_dodge],
-                    B_carry: classes["Gunslinger"][B_carry],
-                    B_accur: classes["Gunslinger"][B_accur],
-                    B_stren: classes["Gunslinger"][B_stren],
-                    B_stealth: classes["Gunslinger"][B_stealth]
+                    M_health: classes["Gunslinger"][M_health],
+                    C_defen: classes["Gunslinger"][C_defen],
+                    C_dodge: classes["Gunslinger"][C_dodge],
+                    M_carry: classes["Gunslinger"][M_carry],
+                    C_accur: classes["Gunslinger"][C_accur],
+                    C_stren: classes["Gunslinger"][C_stren],
+                    C_stealth: classes["Gunslinger"][C_stealth]
                 },
                 break
         else:
@@ -90,13 +98,13 @@ while True:
         if class_are_you_sure == 1:
                 name = "Grenadier"
                 player_stats ={
-                    B_health: classes["Grenadier"][B_health],
-                    B_defen: classes["Grenadier"][B_defen],
-                    B_dodge: classes["Grenadier"][B_dodge],
-                    B_carry: classes["Grenadier"][B_carry],
-                    B_accur: classes["Grenadier"][B_accur],
-                    B_stren: classes["Grenadier"][B_stren],
-                    B_stealth: classes["Grenadier"][B_stealth]
+                    M_health: classes["Grenadier"][M_health],
+                    C_defen: classes["Grenadier"][C_defen],
+                    C_dodge: classes["Grenadier"][C_dodge],
+                    M_carry: classes["Grenadier"][M_carry],
+                    C_accur: classes["Grenadier"][C_accur],
+                    C_stren: classes["Grenadier"][C_stren],
+                    C_stealth: classes["Grenadier"][C_stealth]
                 }
                 break
         else:
@@ -112,39 +120,78 @@ while True:
 print("\nClass selected:", name)
 print("Stats:", player_stats)
 
-#Combat things
-
-
 
 #Weight system
 def pickup(item):
-    player_stats[B_carry] += item
+    player_stats[C_carry] += item["weight"]
 
 def use(item):
-     player_stats[B_carry]-=item
-
-#Inventory
-max = player_stats[B_carry]
+     player_stats[C_carry] -= item["weight"]
 
 #Items (Just the baseline for now)
 Basic_Revolver={
-    B_damage:30,
-    B_accur:15,
-    "weight":15
+    C_damage:26,
+    C_accur:15,
+    "weight":10
 }
 
 def Health_Potion():
-    "heal" = 5
+    "heal" = 45
     "weight" = 2.5
+    "ID" = 1
 
 def healing():
-    player_stats[B_health] += 25
+    player_stats[C_health] += Health_Potion["heal"]
 
 def armor():
-    player_stats[B_carry]+=5
+    "defense" = 30
+    "ID" = 2
 
 def apply_armor():
-    player_stats[B_defen]+=25
-    player_stats[B_carry]-=5
+    player_stats[C_defen]+=25
+    player_stats[M_carry]-=5
+
+#Inventory
+max = player_stats[M_carry]
+current_weight = player_stats[C_carry]
+def max_carry():
+    if C_carry > M_carry:
+        print("You are overencumbered! Drop an item or suffer mobility consequences.")
+    else:
+        print(f"{C_carry}/{M_carry}")
 
 
+
+
+#ENEMIES
+Basic_enemies={
+    "Weapon": Basic_Revolver,
+    M_health: 50,
+    C_health: 50,
+    C_defen: 60,
+    C_dodge:50,
+    C_accur: 40,
+    C_stealth:40,
+    C_stren:30
+}
+
+
+#ROOMS
+loot_locations = ["Left Corner", "Right Corner", "Upper Shelf", "Lower Shelf", "Basket", "Cabinet", "Crate", "Chest", "Desk"]
+#Loot rooms
+Loot_rooms={
+    "Description": "Rather dusty inside, with cobwebs in the corners. From where you stand, you can see some loot lying around the room.",
+    "Enemies":2,
+    "Loot":5
+}
+#fight rooms
+Fight_rooms={
+    "Description":"Dark, musty room, with bullet casings littering the floor. Many have come here recently, but you get a feeling not many have left.",
+    "Enemies":4,
+    "Loot": 2
+}
+
+
+
+
+#Combat things
