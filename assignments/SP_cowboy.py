@@ -137,8 +137,24 @@ def use(item):
 Basic_Revolver={
     C_damage:26,
     C_accur:15,
-    "weight":10
+    "weight":3,
+    "capacity":6
 }
+Trench_Club={
+    C_damage:30,
+    "weight":4
+}
+Carbine={
+    C_damage:34,
+    C_accur:20,
+    "weight":7,
+    "capacity":10
+
+}
+
+def ammo():
+    if C_damage == True:
+        ammo-=1
 
 Health_Potion={
     "heal" : 45,
@@ -155,7 +171,10 @@ armor={
     "price" : 20
 }
 def apply_armor():
-    player_stats[C_defen]+=25
+    player_stats[C_defen]+= armor["defense"]
+
+Weapons=[Basic_Revolver, Carbine, Trench_Club]
+Consumables=[ammo, armor, Health_Potion, money]
 
 #Inventory
 max = player_stats[M_carry]
@@ -198,16 +217,45 @@ Fight_rooms={
 }
 #Merchants
 for_sale={
-    "armor_plates" : apply_armor,
-    "Healing Potion": Healing_Potion
+    "armor_plates" :{
+        "price":20,
+        "action":apply_armor
+        },
+    "Healing Potion": Health_Potion
     
 }
-def merchant():
+def merchant(purchase,money):
     while merchant==True:
         print("*As you enter the room, a friendly-looking merchant waves for you to come over.*\n Merchant: Welcome to my humble shoppe! Please respect the merchandise!")
-        print(for_sale.items())
-
-
-
+        purchase = input(print(for_sale.items()))
+        print('Type the name of the item you would like to purchase and hit enter')
+        if purchase == True:
+            print("Processing transaction")
+            money =- for_sale["armor_plates"],["price"]
+            if money <= 0:
+                print("Transaction refused, you don't have enough money for this item")
+        else:
+            print("Get out of my shop")
+                
 
 #Combat things
+Moves=[Health_Potion, apply_armor, "Attack"]
+
+def player_turn():
+    print(Moves)
+    selected_move=input("what move do you want to do")
+    if selected_move == Health_Potion:
+        healing()
+        exit
+    elif selected_move== apply_armor:
+        apply_armor()
+        exit
+    elif selected_move=="Attack" or "attack":
+        attack_move = print("what move do you want to perform?", Weapons)
+        if attack_move == Basic_Revolver:
+            Basic_enemies[C_health]-=26
+        elif attack_move == Carbine:
+            Basic_enemies[C_health]-=34
+        elif attack_move == Trench_Club:
+            Basic_enemies[C_health]-=30
+
