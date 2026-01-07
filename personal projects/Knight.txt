@@ -1,0 +1,3 @@
+Isaac Covington's personal game project: Knight
+
+The project will be documented here for my own growth as a programmer and learner
