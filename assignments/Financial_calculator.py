@@ -48,6 +48,7 @@ def budget_allocator():
         food = income*15
         utility = income*5
         savings = income*10
+        transportation = income*30
 #return
 
 #Sales price calculator:
