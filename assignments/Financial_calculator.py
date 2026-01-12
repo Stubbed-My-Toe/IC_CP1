@@ -41,14 +41,15 @@ def compound_interest():
 def budget_allocator():
     #What is the amount you want to use on the budget?
     income = float(input("What is your income?\n"))
-    #Divide balance by 100, and then multiply by 40 for rent. Multiply 15 for food and 5 for bills. 10 for savings and 30 for transportation
-    def split_cash():
-        income/=100
-        rent = income*40
-        food = income*15
-        utility = income*5
-        savings = income*10
-        transportation = income*30
+    #Divide balance by 100, and then multiply by 40 for rent. Multiply 15 for food and 5 for bills. 10 for savings and 30 for transportation and ten for personal use
+    rent= 40*(income/100)
+    food = 15*(income/100)
+    utilities = 5*(income/100)
+    savings = 10*(income/100)
+    transportation = 30*(income/100)
+    personal = 10*(income/100)
+    print(f"You will have to spend {rent} on rent, {food} on food, {utilities} on utilities, {savings} on savings, {transportation} on transportation, and {personal} on personal use.")
+
 #return
 
 #Sales price calculator:
