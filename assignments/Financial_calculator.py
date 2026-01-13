@@ -49,23 +49,50 @@ def budget_allocator():
     transportation = 30*(income/100)
     personal = 10*(income/100)
     print(f"You will have to spend {rent} on rent, {food} on food, {utilities} on utilities, {savings} on savings, {transportation} on transportation, and {personal} on personal use.")
-
 #return
 
 #Sales price calculator:
+def sales_price():
     #how much is the original item?
+    price = int(input("What is this item's original cost?\n"))
     #discount what percent is the discount?
+    coupon = int(input("How much is the discount? If the discount is 5%, just put 5 and and so on\n"))
     #Divide price by 100 and then multiply by dicount. Then subtract that number from price.
+    discount = price-((price/100) * coupon)
+    print(discount)
 #return
 
 #Tip calculator:
+def tip_calculator():
     #Bill= what is the bill?
+    bill = float(input("How much does the meal or service orginally?\n"))
     #What percent of a tip are you giving?
+    tip = float(input("How much of a tip are you planning to give?\n"))
     #Divide bill by one hundred then multiply and then add to bill.
+    tip_calc = bill+((bill/100)*tip)
+    print(f"You will have to pay {tip_calc} dollars.")
 #return
 
 #Welcome message: "What would you like to use today?"
+welcome = int(input("What calculation would you like to use?\nPlease type the number of the calculation you want to use.\n\n1. Savings Calculator\n\n2. Compound Interest Calculator\n\n3. Budget Calculator\n\n4. Sale Price Calculator\n\n5. Tip Calculator\n"))
 #Show Options: Savings Calculator, Compound Interest Calculator, Budget Allocator, Sale Price Allocator, Tip Calculator
 
 #If savings:
-    #Savings 
+if welcome == 1:
+    savings_calculator()
+
+elif welcome == 2:
+    compound_interest()
+
+elif welcome == 3:
+    budget_allocator()
+
+elif welcome == 4:
+    sales_price()
+
+elif welcome == 5:
+    tip_calculator()
+
+else:
+    print("Please try again later.")
+    exit
