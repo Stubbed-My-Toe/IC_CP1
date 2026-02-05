@@ -3,4 +3,5 @@
 import csv
 #welcome to the program. This is so you can pick movies. perchance.
 #def func main_menu()
-    #What do you want to search for? Your father? Womp-Womp.
+    #Welcome to the movie recommender main menu. What would you like to do?
+    
