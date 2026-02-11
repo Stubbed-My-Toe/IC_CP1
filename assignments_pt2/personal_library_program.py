@@ -1,6 +1,8 @@
 #IC 1st Personal Library
 
-library = []
+import csv
+from assignments_pt2 import movies_list
+library = [movies_list.csv]
 
 
 #Prints library
@@ -42,18 +44,30 @@ def remove_item():
 
 #menu: shows what everything is and all the options
 def menu():
-    selected_action = int(input("Select which action you want to perform. Type 1 to view the library, 2 to add a new item, 3 to search the library, 4 to remove an item, and 5 to exit the program.\n"))
+    selected_action = int(input("Type the number of the item you want to remove. \n1. View a simple list\n2. View a detailed list\n3. Add an item\n4. Update an item\n5. Delete item\n6. Save Library\n7. Reload library from file\n8. Exit (Unsaved data will be lost)\n"))
     if selected_action == 1:
         view()
     elif selected_action == 2:
-        add_item()
+        view_detailed()
     elif selected_action == 3:
-        search()
+        add_item()
     elif selected_action == 4:
-        remove_item()
+        update_item()
     elif selected_action == 5:
-        print("Exiting Program!")
-        exit()
+        remove_item()
+    elif selected_action == 6:
+        save_library()
+    elif selected_action == 7:
+        rff()
+    elif selected_action == 8:
+        saveyn= input("Unsaved data will be lost if you exit!\n Do you want to save? Y/N")
+        if saveyn == "Y":
+            save_library()
+            exit()
+        elif saveyn == "N":
+            exit()
+        else:
+            print(saveyn)
     else:
         print("Please try again.")
         menu()
@@ -61,7 +75,7 @@ def menu():
 
     
 
-print("Welcome to the Personal Library! This is where you can store books.")
+print("Welcome to the Personal Movie Library! This is where you can store movies.")
 
 while True:
     menu()
