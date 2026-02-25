@@ -1,6 +1,8 @@
 #IC CP2 1st word counter
 
-from files import file_access
+from files import file_access_read
+from files import file_access_write
+from timey_wimey import show_time
 
 def wrdcount_main(main_choice):
     print("--- Document Word Count Updater ---\n1. Update document info\n2. View document\n3. Add content to document\n4. Exit")
@@ -8,16 +10,13 @@ def wrdcount_main(main_choice):
     if main_choice == "1":
         #update document info
         file_path = ("\nEnter the exact file path for your document: ")
-        pass
     elif main_choice == "2":
-        #print(document)
-        pass
+        file_access_read()
     elif main_choice == "3":
-        #add content to document
-        pass
+        file_access_write()
+        show_time()
     elif main_choice == "4":
-        #exit()
-        pass
+        exit()
     else:
         print("\nInput invalid. Please try again.")
         wrdcount_main()
