@@ -4,4 +4,4 @@ import time
 
 def show_time():
     curr = time.ctime(time.time())
-    print("last updated", curr)
+    return curr
