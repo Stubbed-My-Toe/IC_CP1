@@ -10,7 +10,7 @@ class Circle:
 
 def create_circle(Circle):
        circle_radius = float("What do you want the radius of your circle to be?")
-       Circle.
+       Circle"circle"
 
 
 print("""=====================================
@@ -26,16 +26,16 @@ def what_shape(picked_shape):
         [4] Triangle
 
         Enter shape type (1-4): """).strip()
-    return picked_shape   
+    return
 what_shape()
 
 if picked_shape == "1":
-
+        pass
 elif picked_shape == "2":
         pass
-elif picked_action == "3":
+elif picked_shape == "3":
         pass
-elif picked_action == "4":
+elif picked_shape == "4":
         pass
 else:
         what_shape()
